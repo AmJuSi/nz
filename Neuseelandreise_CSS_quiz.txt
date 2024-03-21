@@ -1,0 +1,57 @@
+https://webmapping.github.io/nz/quiz
+
+
+was bewirkt die CSS Regel in Zeile 5-10?
+- Schriftart,Hintergrundfarbe, maximale Berite der Seite, Einstellungen zu Rand
+- definition vom Body
+- margine auto = Bilder Mittig
+
+wozu wird das Größerzeichen (>) in Zeile 12 verwendet?
+- spricht das erste Bild im Header an -> bei allen Bildern maximal 100% weite
+
+was passiert in der CSS Regel in Zeile 16-21?
+- betrifft user bild
+- a = 
+- Border Radius = radius der außeren ecken, Abrundung der Ecken 
+- display = art der Box die für das Element erstellt wird
+- margine= Positionierung in der mitte
+- margine top= abstand nach oben -> wird -50 nach oben gerückt
+
+was passiert in der CSS Regel in Zeile 23-30?
+- spezifikationen für den Hauptteil
+- maximale Berite
+- breite des Randes
+- border left/top/bottom: Linie außen rum & deren Spezifikation: Dicke, Farbe, Art der Linie
+
+was bewirkt padding in Zeile 33?
+- schafft Platz um "article"
+- Innerhalb des dashed wird eingerückt (margin betrifft außerhalb der dashed line)
+- em ist verhältnis zur Schriftgröße
+
+wo werden die Fonts Roboto und Montserrat in Zeile 37 & Zeile 45 definiert?
+- definiert schriftarten (37: alles hinter p; 45 für Header)
+- justify ist für Blocksatz
+- line height: Zeilenabstand
+- in Header wurden schriftarten importiert
+
+findet die Quelle aller verwendeten Fonts im Internet
+- link url zeile 3 -> kommt man zu seite, wo weitere quellen sind zu jeder schrift (google)
+- fonts.google.com -> kostelose schriftarten
+- werden über link eingebaut, muss man nicht extra runterladen 
+
+warum steht eine Raute (#) vor map in Zeile 52?
+- 
+wofür stehen die vier Werte bei padding in Zeile 61?
+- abstände: rechts, unten, links
+
+was bewirkt die CSS Regel in Zeile 64-67?
+- layout
+- display grid -> nebeneinader dargestellte "Kästen" 
+- Prozent: Positionierung: 40% an den Seiten, 20% in der Mitte
+
+welche Elemente werden mit dem Schatten in Zeile 76-78 angesprochen?
+- box-shadow: Schattenart der 3D effekt macht
+    rgba: farbe (rot grün blau), ganz hinten Transparenz (a)
+
+was bewirkt die @media Regel in Zeile 81-90? Könnt ihr sie im Browser reproduzieren?
+- wenn bildschirm kleiner als die 1280 pixel -> dann verschwindet der Rand 
