@@ -14,6 +14,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+/*
 let marker = L.marker([lat, lng]).addTo(map);
 marker.bindPopup(`
     <h2>Pancake Rocks</h2>
@@ -23,7 +24,9 @@ marker.bindPopup(`
         <li> Länge: ${lng.toFixed(5)}</li>
     </ul>
 `).openPopup();
+*/
 
+//Maßstab
 L.control.scale({
     imperial: false,
     maxWidth: 100
@@ -39,4 +42,15 @@ let jsonPunkt = {
     "properties": {
         "name": "Pancake Rocks"
     }
-}
+};
+
+L.geoJSON(jsonPunkt, {}).bindPopup(function (layer) {
+    return `
+    <h2>${layer.feature.properties.name}</h2>
+    <br>Here you can find the Pancake Rocks.
+    <ul>
+        <li> Breite: ${layer.feature.geometry.coordinates[1].toFixed(5)} </li>
+        <li> Länge: ${layer.feature.geometry.coordinates[0].toFixed(5)}</li>
+    </ul>
+`;
+}).addTo(map);
