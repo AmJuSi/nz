@@ -5,7 +5,7 @@ let zoom = 13;
 // let map2 = L.map('map').setView([lat, lng], zoom); // L steht für leaflet; andere Methode als unterhalb
 // {} object literals, innerhalb sind key-values mit kommas getrennt; wie python dictionarys
 var map = L.map('map', {
-    center: [lat, lng],
+    center: [lat, lng], // [] Array o. Liste, einträge mit komma getrennt
     zoom: zoom
 });
 
@@ -23,3 +23,8 @@ marker.bindPopup(`
         <li> Länge: ${lng.toFixed(5)}</li>
     </ul>
 `).openPopup();
+
+L.control.scale({
+    imperial: false,
+    maxWidth: 100
+}).addTo(map);
