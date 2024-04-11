@@ -2,7 +2,12 @@ let lat = -42.118611111111;
 let lng = 171.32694444444;
 let zoom = 13;
 
-let map = L.map('map').setView([lat, lng], zoom);
+// let map2 = L.map('map').setView([lat, lng], zoom); // L steht für leaflet; andere Methode als unterhalb
+// {} object literals, innerhalb sind key-values mit kommas getrennt; wie python dictionarys
+var map = L.map('map', {
+    center: [lat, lng],
+    zoom: zoom
+});
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
