@@ -28,3 +28,15 @@ L.control.scale({
     imperial: false,
     maxWidth: 100
 }).addTo(map);
+
+//GeoJson 
+let jsonPunkt = {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [lng, lat]
+    },
+    "properties": {
+        "name": "Pancake Rocks"
+    }
+}
