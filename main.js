@@ -301,12 +301,14 @@ let jsonData = {
 
 //Popup mit GeoJson in Leaflet karte
 L.geoJSON(jsonData, {}).bindPopup(function (layer) {
+    console.log(layer.feature.properties)
     return `
     <h2>${layer.feature.properties.name}</h2>
-    <br>Here you can find the Pancake Rocks.
     <ul>
         <li> Breite: ${layer.feature.geometry.coordinates[1].toFixed(5)} </li>
         <li> Länge: ${layer.feature.geometry.coordinates[0].toFixed(5)}</li>
+        <li> <a href="https://${layer.feature.properties.user}.github.io/nz">Etappenseite</a> </li>
+        <li> <a href= ${layer.feature.properties.wikipedia}>Wikipediaeintrag<a/> </li>
     </ul>
 `;
 }).addTo(map);
